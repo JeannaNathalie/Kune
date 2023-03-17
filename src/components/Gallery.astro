@@ -1,30 +1,28 @@
 ---
 ---
 
+<div class="banner">
+  <div class="scrolling-text">
+    <span>19. - 23 JULY 19. - 23 JULY 19. - 23 JULY</span>
+    <span>19. - 23 JULY 19. - 23 JULY 19. - 23 JULY</span>
+  </div>
+</div>
+
 <div class="slideshow-container">
+  <p>GALLERY</p>
   <div class="mySlides fade">
-    <div class="dots"></div>
-    <div class="gallery_text">Gallery</div>
     <img class="img1" src="public/images/gallery1.webp" alt="img1" />
   </div>
   <div class="mySlides fade">
-    <div class="dots"></div>
-    <div class="gallery_text">Gallery</div>
     <img class="img5" src="public/images/gallery5.webp" alt="img5" />
   </div>
   <div class="mySlides fade">
-    <div class="dots"></div>
-    <div class="gallery_text">Gallery</div>
     <img class="img2" src="public/images/gallery2.webp" alt="img2" />
   </div>
   <div class="mySlides fade">
-    <div class="dots"></div>
-    <div class="gallery_text">Gallery</div>
     <img class="img3" src="public/images/gallery3.webp" alt="img3" />
   </div>
   <div class="mySlides fade">
-    <div class="dots"></div>
-    <div class="gallery_text">Gallery</div>
     <img class="img4" src="public/images/gallery4.webp" alt="img4" />
   </div>
 
@@ -63,81 +61,39 @@
     slides[slideIndex - 1].style.display = "block";
   }
 </script>
+
 <style>
-  .mySlides {
-    display: none;
-  }
-
-  .slideshow-container {
-    max-width: 80%;
-    position: relative;
-    margin: auto;
-  }
-  /* Next & previous buttons */
-  .prev,
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 40%;
-    width: auto;
-    margin-top: -1rem;
-    padding: 1rem;
-    color: var(--secondary-color);
-    font-weight: bold;
-    font-size: 1rem;
-    transition: 0.6s ease;
-    border-radius: 3px 3px 3px 3px;
-    user-select: none;
-  }
-
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
-    background-color: var(--primary-color);
-  }
-
-  /* The dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-
-  .active,
-  .dot:hover {
-    background-color: var(--secondary-color);
-  }
-
-  /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-
-  .link {
-    text-decoration: none;
-  }
-
-  @keyframes fade {
-    from {
-      opacity: 0.4;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+  /* MEDIA QUERY */
   @media (max-width: 600px) {
+    .banner {
+      width: 100%;
+      height: 50px;
+      overflow: hidden;
+    }
+
+    .scrolling-text {
+      max-width: 100%;
+      display: flex;
+      animation: scroll 5s linear infinite;
+    }
+
+    .scrolling-text span {
+      max-width: 100%;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      margin-right: 50px;
+      white-space: nowrap;
+    }
+
+    @keyframes scroll {
+      100% {
+        transform: translateX(-100);
+      }
+      0% {
+        transform: translateX(-100%);
+      }
+    }
     .container {
       display: flex;
       justify-content: center;
@@ -146,8 +102,107 @@
     .container img {
       max-width: 100%;
     }
+
+    .mySlides {
+      display: none;
+    }
+
+    .slideshow-container {
+      max-width: 80%;
+      position: relative;
+      margin: auto;
+    }
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;
+      margin-top: -1rem;
+      padding: 1rem;
+      color: var(--text-color);
+      font-weight: bold;
+      font-size: 2.5rem;
+      transition: 0.6s ease;
+      border-radius: 3px 3px 3px 3px;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      color: var(--primary-color);
+    }
+
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0.4;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .slideshow-container img {
+      display: flex;
+      margin: 0%;
+      max-width: 100%;
+    }
+    .slideshow-container {
+      max-width: 100%;
+    }
+    .slideshow-container p {
+      color: var(--text-color);
+      text-align: center;
+    }
   }
   @media (min-width: 600px) {
+    .banner {
+      width: 100%;
+      height: 50px;
+      overflow: hidden;
+    }
+
+    .scrolling-text {
+      max-width: 100%;
+      display: flex;
+      animation: scroll 5s linear infinite;
+    }
+
+    .scrolling-text span {
+      max-width: 100%;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      margin-right: 50px;
+      white-space: nowrap;
+    }
+
+    @keyframes scroll {
+      100% {
+        transform: translateX(-100);
+      }
+      0% {
+        transform: translateX(-100%);
+      }
+    }
+    .slideshow-container p {
+      color: var(--text-color);
+      text-align: center;
+      font-size: 2em;
+    }
     .container {
       display: flex;
       justify-content: center;
@@ -160,6 +215,71 @@
       display: flex;
       justify-content: center;
       max-width: 80%;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    .slideshow-container {
+      max-width: 80%;
+      position: relative;
+      margin: auto;
+    }
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;
+      margin-top: -1rem;
+      padding: 1rem;
+      color: var(--text-color);
+      font-weight: bold;
+      font-size: 4rem;
+      transition: 0.6s ease;
+      border-radius: 3px 3px 3px 3px;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      color: var(--primary-color);
+    }
+
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0.4;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .slideshow-container img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      text-align: center;
+      margin: 0%;
+      max-width: 100%;
+    }
+    .slideshow-container {
+      max-width: 100%;
     }
   }
 </style>
