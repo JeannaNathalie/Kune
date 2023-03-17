@@ -16,32 +16,7 @@ body {
   background: linear-gradient(180deg, rgba(209, 103, 61, 1) 0%, rgba(227, 145, 80, 0.8491596467688638) 50%, rgba(217, 135, 99, 1) 100%);
 }
 
-.sol {
-  position: absolute;
-  max-width: 85%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.container p {
-  font-weight: 800;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: white;
-  font-size: 2em;
-  text-align: center;
-  z-index: 2;
-  margin: 2%;
-  color: transparent;
-}
-
-.container {
-  padding: 4em;
-  background-image: url(public/images/sol.svg);
-  background-size: 90%;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  text-align: center;
+main {
+  padding: 2em;
+  padding-top: 0%;
 }
