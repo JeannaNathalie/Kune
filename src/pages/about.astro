@@ -10,103 +10,111 @@ import Layout from "../layouts/Layout.astro";
   </div> -->
   <div class="about_grid">
     <h2 class="a_grid-1">WE ARE KUNE</h2>
-    <div class="a_grid-2">
-      <p>Being at KUNE Festival is an immersive experience that blends art, music, and the island’s natural beauty. The location’s secludedness adds to the sense of separation from everyday life. At the same time, the art invites us to engage in open discussions and imagine a world that can be different, making a positive impact over our mentality and worldview. In conjunction with the art, the music creates a holistic cultural experience.</p>
-      <button>JOIN US</button>
-    </div>
+    <p class="a_grid-2">Being at KUNE Festival is an immersive experience that blends art, music, and the island’s natural beauty. The location’s secludedness adds to the sense of separation from everyday life. At the same time, the art invites us to engage in open discussions and imagine a world that can be different, making a positive impact over our mentality and worldview. In conjunction with the art, the music creates a holistic cultural experience.</p>
+    <button class="a_grid-knap1">JOIN US!</button>
     <h2 class="a_grid-3">THE LOCATION</h2>
-    <div class="a_grid-4">
-      <p>Being at KUNE Festival is an immersive experience that blends art, music, and the island’s natural beauty. The location’s secludedness adds to the sense of separation from everyday life. At the same time, the art invites us to engage in open discussions and imagine a world that can be different, making a positive impact over our mentality and worldview. In conjunction with the art, the music creates a holistic cultural experience.</p>
-      <button>TICKETS</button>
-    </div>
+    <p class="a_grid-4">Being at KUNE Festival is an immersive experience that blends art, music, and the island’s natural beauty. The location’s secludedness adds to the sense of separation from everyday life. At the same time, the art invites us to engage in open discussions and imagine a world that can be different, making a positive impact over our mentality and worldview. In conjunction with the art, the music creates a holistic cultural experience.</p>
+    <button class="a_grid-knap2">TICKETS</button>
   </div>
-</Layout>
 
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  button {
-    background-color: var(--contrast-color);
-    color: #fcf0cb;
-    padding: 0.7rem 2rem 0.7rem 2rem;
-    border-radius: 25px;
-    border: none;
-    box-shadow: 6px 7px 5px rgb(180, 179, 179);
-  }
-
-  h2 {
-    color: var(--text-color);
-  }
-
-  p {
-    color: #fcf0cb;
-  }
-
-  .title {
-    text-align: center;
-  }
-
-  .about_title_grid {
-    display: grid;
-    gap: 10px;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .a_title-1 {
-    grid-column: 2/3;
-    grid-row: 2/3;
-  }
-
-  .a_title-2 {
-    grid-column: 1/4;
-    grid-row: 1/4;
-  }
-
-  /* 
-  body {
-    background-image: url("/public/images/about.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-  } */
-
-  @media (min-width: 900px) {
-    h2 {
-      font-size: 2.5rem;
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
-    .about_grid {
+    button {
+      background-color: var(--contrast-color);
+      color: #fcf0cb;
+      padding: 0.9rem 2.5rem 0.9rem 2.5rem;
+      border-radius: 25px;
+      border: none;
+      box-shadow: 6px 7px 5px rgb(180, 179, 179);
+      margin-top: 1rem;
+    }
+
+    h2 {
+      color: var(--text-color);
+      padding-top: 4rem;
+    }
+
+    p {
+      color: #fcf0cb;
+      padding-top: 1rem;
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    .about_title_grid {
       display: grid;
       gap: 10px;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
     }
 
-    .a_grid-1 {
-      grid-column: 1/3;
-      grid-row: 1/2;
-    }
-
-    .a_grid-2 {
-      grid-column: 1/3;
+    .a_title-1 {
+      grid-column: 2/3;
       grid-row: 2/3;
     }
 
-    .a_grid-3 {
-      grid-column: 4/5;
-      grid-row: 3/4;
+    .a_title-2 {
+      grid-column: 1/4;
+      grid-row: 1/4;
     }
 
-    .a_grid-4 {
-      grid-column: 3/5;
-      grid-row: 4/5;
+    @media (min-width: 900px) {
+      h2 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: larger;
+      }
+      button {
+        margin-top: 7rem;
+        font-size: 1.6rem;
+      }
+
+      .about_grid {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+
+      .a_grid-1 {
+        grid-column: 1/3;
+        grid-row: 1/2;
+      }
+
+      .a_grid-2 {
+        grid-column: 1/3;
+        grid-row: 2/3;
+      }
+
+      .a_grid-knap1 {
+        grid-column: 1/2;
+        grid-row: 3/4;
+      }
+      .a_grid-3 {
+        grid-column: 4/5;
+        grid-row: 3/4;
+      }
+
+      .a_grid-4 {
+        grid-column: 3/5;
+        grid-row: 4/5;
+      }
+      .a_grid-knap2 {
+        grid-column: 3/4;
+        grid-row: 5/6;
+      }
     }
-  }
-</style>
+  </style>
+</Layout>
