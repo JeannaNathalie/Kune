@@ -3,11 +3,11 @@ import "../styles/style.css";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="ABOUT">
-  <div class="about_title_grid">
+<Layout herosrc="/public/images/about.webp" herotitle="ABOUT">
+  <!-- <div class="about_title_grid">
     <img class="a_title-2" src="/public/images/about.webp" alt="Havnebillede" />
     <h1 class="a_title-1 title">ABOUT</h1>
-  </div>
+  </div> -->
   <div class="about_grid">
     <h2 class="a_grid-1">WE ARE KUNE</h2>
     <div class="a_grid-2">
@@ -43,13 +43,8 @@ import Layout from "../layouts/Layout.astro";
     box-shadow: 6px 7px 5px rgb(180, 179, 179);
   }
 
-  h1,
   h2 {
     color: var(--text-color);
-  }
-
-  h1 {
-    font-size: 3rem;
   }
 
   p {
@@ -84,10 +79,6 @@ import Layout from "../layouts/Layout.astro";
   } */
 
   @media (min-width: 900px) {
-    h1 {
-      font-size: 6rem;
-    }
-
     h2 {
       font-size: 2.5rem;
     }
