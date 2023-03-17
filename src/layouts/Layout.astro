@@ -2,6 +2,8 @@
 import "../styles/style.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Burgermenu from "../components/Burgermenu.astro";
+import Headernobile from "../components/Headernobile.astro";
 const { title, herosrc, herotitle } = Astro.props;
 ---
 
@@ -21,7 +23,7 @@ const { title, herosrc, herotitle } = Astro.props;
 
       <div>
         <Header />
-        <Headermenu />
+        <Burgermenu />
         <Headernobile />
       </div>
     </div>
