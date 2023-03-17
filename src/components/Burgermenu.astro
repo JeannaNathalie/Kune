@@ -1,5 +1,7 @@
 <div>
-  <p>logo</p>
+  <div class="logo">
+    <a href="index"><img src="public/images/Logos(1)/Logo - Cirkular.png" /></a>
+  </div>
   <button id="burger-menu">
     Menu
     <span></span>
@@ -7,13 +9,18 @@
 
   <nav id="menu">
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Products</a></li>
-      <li><a href="#">About Us</a></li>
+      <li><a href="#">BOOK</a></li>
+      <li><a href="#">LINE-UP</a></li>
+      <li><a href="#">ABOUT</a></li>
+      <li><a href="#">CONTACT</a></li>
     </ul>
   </nav>
 </div>
 <style>
+  .logo {
+    text-decoration: none;
+    padding: 1rem;
+  }
   div {
     display: flex;
     justify-content: space-between;
@@ -35,16 +42,12 @@
     display: inline;
   }
 
-  a {
+  #menu a {
     color: #b34e17;
     text-decoration: none;
   }
 
-  /* .header-button {
-    display: inline-block;
-  } */
-
-  a {
+  #menu a {
     background-color: #f9df90;
     border: none;
 
@@ -57,9 +60,10 @@
     padding: 0.51rem 2rem 0.5rem 2rem;
     color: #b34e17;
     border-radius: 25px;
+    min-width: 100px;
   }
 
-  a:hover {
+  #menu a:hover {
     background-color: #fff0c1;
   }
 
@@ -77,6 +81,10 @@
   }
 
   @media screen and (max-width: 900px) {
+    .logo {
+      text-decoration: none;
+      padding: ;
+    }
     #menu ul {
       display: block;
     }
@@ -86,7 +94,7 @@
     #burger-menu span,
     #burger-menu span:before,
     #burger-menu span:after {
-      background: #333;
+      background: #f9df90;
       display: block;
       height: 3px;
       opacity: 1;
@@ -113,13 +121,13 @@
       top: 0px;
       transform: rotate(90deg);
       width: 27px;
-      background: #fff;
+      background: #f9df90;
     }
     #burger-menu.close span {
       transform: rotate(-45deg);
       top: 13px;
       width: 27px;
-      background: #fff;
+      background: #f9df90;
     }
     #burger-menu.close span:after {
       top: 0px;
@@ -146,21 +154,48 @@
       visibility: visible;
       opacity: 1;
       padding-top: 100px;
-      background: rgba(0, 0, 0, 0.8);
+      background: rgb(209, 103, 61);
+      background: linear-gradient(
+        180deg,
+        rgba(209, 103, 61, 1) 0%,
+        rgba(227, 145, 80, 0.8491596467688638) 50%,
+        rgba(217, 135, 99, 1) 100%
+      );
     }
     #menu ul {
       padding: 0;
+      display: flex;
+      flex-direction: column;
     }
     #menu li {
       list-style: none;
       display: initial;
     }
     #menu a {
-      color: #fff;
-      display: block;
+      color: #b34e17;
+
       font-size: 32px;
+      min-width: 150px;
       margin-bottom: 30px;
       text-decoration: none;
+    }
+    a {
+      background-color: #f9df90;
+      border: none;
+
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      padding: 0.5rem 1rem 0.5rem 1rem;
+      color: #b34e17;
+      border-radius: 25px;
+    }
+
+    a:hover {
+      background-color: #fff0c1;
     }
   }
 </style>
