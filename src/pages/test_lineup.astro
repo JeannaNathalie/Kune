@@ -1,0 +1,23 @@
+---
+import "../styles/style.css";
+import Layout from "../layouts/Layout.astro";
+import Liste from "../components/Liste.astro";
+const data = await fetch("https://vjkpuzanrdrppgpcpzrk.supabase.co/rest/v1/kune", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZqa3B1emFucmRycHBncGNwenJrIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3MzM5ODEsImV4cCI6MTk5NDMwOTk4MX0.zvDI-NxxAZI0aLOzygX5rbdZd4zlaug-JQOTnHqEc0Y",
+  },
+}).then((res) => res.json());
+---
+
+<Layout title="LINE-UP">
+  <h2>Her er LINE-UP</h2>
+
+  <section class="artists">
+    {
+      data.map((artist) => {
+        return <Liste data={artist} />;
+      })
+    }
+  </section>
+</Layout>
