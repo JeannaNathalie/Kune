@@ -1,52 +1,58 @@
 <footer>
-  <ul class="list">
-    <li>
-      <a href="index.html">ABOUT</a>
-    </li>
-    <li>
-      <a href="minportfolio.html">CONTACT</a>
-    </li>
-    <li>
-      <a href="ommeg.html">POLICY</a>
-    </li>
-  </ul>
-  <div><p>Copyright &copy 2023 KUNE</p></div>
-
-  <style>
-    footer {
-      background-image: url(public/images/footer.svg);
-      background-repeat: no-repeat;
-      background-size: auto;
-      height: auto;
-      font-family: "PT Serif", serif;
-      padding: 40px 0;
-    }
-
-    .list {
-      text-align: center;
-    }
-    footer ul {
-      list-style: none;
-      line-height: 1.6;
-      margin-bottom: 0;
-      text-align: center;
-      align-content: center;
-      text-decoration: none;
-      display: flex;
-      gap: 60px;
-      padding-top: 33rem;
-    }
-
-    .li {
-      display: inline;
-      padding: 0 15px;
-    }
-    a {
-      text-decoration: none;
-      color: black;
-    }
-    p {
-      text-align: center;
-    }
-  </style>
+  <img src="/images/footer.svg" alt="" />
+  <div>
+    <ul class="list">
+      <li>
+        <a href="index.html">ABOUT</a>
+      </li>
+      <li>
+        <a href="minportfolio.html">CONTACT</a>
+      </li>
+      <li>
+        <a href="ommeg.html">POLICY</a>
+      </li>
+    </ul>
+    <div><p>Copyright &copy 2023 KUNE</p></div>
+  </div>
 </footer>
+<style>
+  footer {
+    display: grid;
+    /* background-image: url(/images/footer.svg) BRUKE BILDE I HTML ISTEDENFOR CSS;
+
+    background-size: cover;
+   
+    min-height: 300px; */
+  }
+  img {
+    max-width: 100%;
+    /*outline: 2px solid #000; Sjekke hvor stor er bilde ved å outline den*/
+  }
+  footer > * {
+    grid-column: 1;
+    grid-row: 1;
+    align-items: end;
+  }
+
+  footer ul {
+    list-style: none;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+  div {
+    align-self: end;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  p {
+    text-align: center;
+  }
+</style>
