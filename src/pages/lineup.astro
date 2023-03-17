@@ -4,7 +4,29 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="LINE-UP">
-  <h2>Her er LINE-UP</h2>
+  <h1>WEDNESDAY 19 JULY</h1>
+  <div class="grid_1-1-1-1">
+    <div class="img1">
+      <img class="biggerimage2" src="/images/gallery1.webp" alt="artist" />
+      <h2>Atwix twin</h2>
+      <p class="txt_lineup">Let´s welcome an Irish-born British musician, composer and DJ.</p>
+    </div>
+    <div class="img2">
+      <img class="biggerimage3" src="/images/gallery2.webp" alt="artist" />
+      <h2>Atwix twin</h2>
+      <p class="txt_lineup">Let´s welcome an Irish-born British musician, composer and DJ.</p>
+    </div>
+    <div class="img3">
+      <img class="biggerimage2" src="/images/gallery3.webp" alt="artist" />
+      <h2>Atwix twin</h2>
+      <p class="txt_lineup">Let´s welcome an Irish-born British musician, composer and DJ.</p>
+    </div>
+    <div class="img4">
+      <img class="biggerimage" src="/images/gallery4.webp" alt="artist" />
+      <h2>Atwix twin</h2>
+      <p class="txt_lineup">Let´s welcome an Irish-born British musician, composer and DJ.</p>
+    </div>
+  </div>
   <div class="grid_1-1-1-1">
     <div class="img1">
       <img class="biggerimage2" src="/images/gallery1.webp" alt="artist" />
@@ -33,12 +55,13 @@ import Layout from "../layouts/Layout.astro";
   .grid_1-1-1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 30px;
   }
 
   .img1 {
     grid-row: 1/3;
     grid-column: 1/2;
+    justify-content: center;
+    align-items: center;
   }
 
   .img2 {
@@ -47,13 +70,13 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .img3 {
-    grid-row: 3/5;
+    grid-row: 1/4;
     grid-column: 3/4;
   }
 
   .img4 {
-    grid-row: 1/3;
-    grid-column: 4/5;
+    grid-row: 2/4;
+    grid-column: 4/4;
   }
 
   img {
@@ -64,8 +87,8 @@ import Layout from "../layouts/Layout.astro";
 
   .biggerimage {
     border-radius: 50%;
-    width: 350px;
-    height: 350px;
+    width: 400px;
+    height: 400px;
   }
 
   .biggerimage2 {
@@ -76,7 +99,69 @@ import Layout from "../layouts/Layout.astro";
 
   .biggerimage3 {
     border-radius: 50%;
-    width: 290px;
-    height: 290px;
+    width: 300px;
+    height: 300px;
+  }
+
+  h1 {
+    text-align: center;
+    color: #f9df90;
+    padding-bottom: 7rem;
+  }
+  h2 {
+    text-align: center;
+    color: #fff8e1;
+  }
+
+  p {
+    text-align: center;
+    color: #fff0c1;
+  }
+  @media (max-width: 800px) {
+    .grid_1-1-1-1 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      align-items: center;
+    }
+    .img1 {
+      grid-row: 1;
+      grid-column: 1;
+      align-items: center;
+    }
+
+    .img2 {
+      grid-row: 2;
+      grid-column: 1;
+      align-items: center;
+    }
+    .img3 {
+      grid-row: 3;
+      grid-column: 1;
+      align-items: center;
+    }
+    .img4 {
+      grid-row: 4;
+      grid-column: 1;
+      align-items: center;
+    }
+
+    .biggerimage {
+      border-radius: 50%;
+      width: 300px;
+      height: 300px;
+    }
+
+    .biggerimage2 {
+      border-radius: 50%;
+      width: 300px;
+      height: 300px;
+    }
+
+    .biggerimage3 {
+      border-radius: 50%;
+      width: 300px;
+      height: 300px;
+    }
   }
 </style>
