@@ -1,12 +1,24 @@
 ---
 import "../styles/style.css";
 import Layout from "../layouts/Layout.astro";
+import Liste from "../components/Liste.astro";
+const data = await fetch("https://vjkpuzanrdrppgpcpzrk.supabase.co/rest/v1/kune", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZqa3B1emFucmRycHBncGNwenJrIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3MzM5ODEsImV4cCI6MTk5NDMwOTk4MX0.zvDI-NxxAZI0aLOzygX5rbdZd4zlaug-JQOTnHqEc0Y",
+  },
+}).then((res) => res.json());
 ---
 
 <Layout title="LINE-UP">
   <h1>WEDNESDAY 19 JULY</h1>
   <div class="grid_1-1-1-1">
-    <div class="img1">
+    {
+      data.slice(0, 4).map((artist, index) => {
+        return <Liste index={index} data={artist} />;
+      })
+    }
+    <!-- <div class="img1">
       <img class="biggerimage2" src="/images/gallery1.webp" alt="artist" />
       <h2>Atwix twin</h2>
       <h3>Techno</h3>
@@ -29,10 +41,15 @@ import Layout from "../layouts/Layout.astro";
       <h2>Atwix twin</h2>
       <h3>Techno</h3>
       <p class="txt_lineup">Let´s welcome an Irish-born British musician, composer and DJ.</p>
-    </div>
+    </div> -->
   </div>
   <div class="grid_1-1-1-1">
-    <div class="img1">
+    {
+      data.slice(4, 8).map((artist, index) => {
+        return <Liste index={index} data={artist} />;
+      })
+    }
+    <!-- <div class="img1">
       <img class="biggerimage2" src="/images/gallery1.webp" alt="artist" />
       <h2>Atwix twin</h2>
       <h3>Techno</h3>
@@ -55,7 +72,7 @@ import Layout from "../layouts/Layout.astro";
       <h2>Atwix twin</h2>
       <h3>Techno</h3>
       <p class="txt_lineup">Let´s welcome an Irish-born British musician, composer and DJ.</p>
-    </div>
+    </div> -->
   </div>
 </Layout>
 
@@ -66,70 +83,10 @@ import Layout from "../layouts/Layout.astro";
     gap: 18px;
   }
 
-  .img1 {
-    grid-row: 1/3;
-    grid-column: 1/2;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .img2 {
-    grid-row: 2/4;
-    grid-column: 2/3;
-  }
-
-  .img3 {
-    grid-row: 1/4;
-    grid-column: 3/4;
-  }
-
-  .img4 {
-    grid-row: 2/4;
-    grid-column: 4/4;
-  }
-
-  img {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-  }
-
-  .biggerimage {
-    border-radius: 50%;
-    width: 400px;
-    height: 400px;
-  }
-
-  .biggerimage2 {
-    border-radius: 50%;
-    width: 250px;
-    height: 250px;
-  }
-
-  .biggerimage3 {
-    border-radius: 50%;
-    width: 300px;
-    height: 300px;
-  }
-
   h1 {
     text-align: center;
     color: #f9df90;
     padding-bottom: 3rem;
-  }
-  h2 {
-    text-align: center;
-    color: #fff8e1;
-  }
-
-  p {
-    text-align: center;
-    color: #fff0c1;
-  }
-
-  h3 {
-    text-align: center;
-    color: #fff8e1;
   }
 
   @media (max-width: 800px) {
